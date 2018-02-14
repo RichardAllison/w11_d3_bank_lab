@@ -30,7 +30,7 @@ describe('Bank', function() {
     assert.deepEqual(bank.accountByName("Craig"), account4);
   });
 
-  xit("should be able to find an account with highest value", function() {
+  it("should be able to find an account with highest value", function() {
     assert.deepEqual(bank.largestAccount(), account3);
   });
 

@@ -13,4 +13,14 @@ Bank.prototype.accountByName = function (name) {
   return account[0];
 }
 
+Bank.prototype.largestAccount = function () {
+  const highestValue = this.accounts.reduce(function(a, account) {
+    return Math.max(a, account.value);
+  }, 0)
+  const highestValueAccount = this.accounts.filter(function(account) {
+    return account.value === highestValue;
+  })
+  return highestValueAccount[0];
+}
+
 module.exports = Bank;
