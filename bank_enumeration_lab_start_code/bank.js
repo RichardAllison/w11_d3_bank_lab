@@ -37,4 +37,11 @@ Bank.prototype.businessAccounts = function () {
   })
 }
 
+Bank.prototype.totalValue = function () {
+  const total = this.accounts.reduce(function (acc, account) {
+    return acc + account.value;
+  }, 0)
+  return total;
+}
+
 module.exports = Bank;
