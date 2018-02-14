@@ -31,4 +31,10 @@ Bank.prototype.payInterest = function () {
   this.accounts = addedInterest;
 }
 
+Bank.prototype.businessAccounts = function () {
+  return this.accounts.filter(function (account) {
+    return account.type === 'business';
+  })
+}
+
 module.exports = Bank;
