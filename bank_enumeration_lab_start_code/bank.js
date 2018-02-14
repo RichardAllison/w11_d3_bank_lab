@@ -44,4 +44,11 @@ Bank.prototype.totalValue = function () {
   return total;
 }
 
+Bank.prototype.averageValue = function () {
+  const total = this.accounts.reduce(function (acc, account) {
+    return acc + account.value;
+  }, 0)
+  return total/this.accounts.length;
+}
+
 module.exports = Bank;
