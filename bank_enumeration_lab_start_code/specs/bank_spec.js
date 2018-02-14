@@ -26,7 +26,7 @@ describe('Bank', function() {
     assert.strictEqual(bank.accounts.length, 4);
   });
 
-  xit("should be able to find an account by owner name", function() {
+  it("should be able to find an account by owner name", function() {
     assert.deepEqual(bank.accountByName("Craig"), account4);
   });
 
@@ -42,7 +42,7 @@ describe('Bank', function() {
     var expected = [interestPaid1, interestPaid2, interestPaid3, interestPaid4]
 
     bank.payInterest();
-    
+
     assert.deepStrictEqual(bank.accounts, expected)
   });
 
